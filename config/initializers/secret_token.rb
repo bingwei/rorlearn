@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Techlearn::Application.config.secret_key_base = 'e2001a3d9778ec47938fec98504d03eabce96719ebb41d85bba9537c89b7eeed95c5ae7c42b96bb7c7c1dbec1a2456d4afbd4fac2175e0c4c192ef002cb8a605'
+Heroku::Application.config.secret_key_base = '67cabe3e5cb26d0ac7713c44a273783ea413149d9c5c18c2653def737fbcd0d013fef286aafd8f70925f019ba692e43f91d04ee304490c22b36eceebde2fe20e'

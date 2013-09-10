@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Techlearn::Application.load_tasks
+Heroku::Application.load_tasks
