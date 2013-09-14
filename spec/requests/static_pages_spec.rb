@@ -1,6 +1,11 @@
 require 'spec_helper'
 
+# let(:prefix) {"Ruby on Rails Tutorial Sample App | "}
+# prefix = "Ruby on Rails Tutorial Sample App | "
+
 describe "StaticPages" do
+  let(:prefix) {"Ruby on Rails Tutorial Sample App | "}
+      
   describe "Home page" do
     it "should have the content 'Home Page'" do
       visit '/static_pages/home'
@@ -8,7 +13,7 @@ describe "StaticPages" do
     end
     it "should have right title" do
       visit '/static_pages/home'
-      page.should have_title('Ruby on Rails Tutorial Sample App | Home')
+      page.should have_title("#{prefix}Home")
     end
   end
   
@@ -19,7 +24,7 @@ describe "StaticPages" do
     end
     it "should have the title 'Help'" do
       visit '/static_pages/help'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Help")
+      expect(page).to have_title("#{prefix}Help")
     end
   end
   
@@ -30,7 +35,7 @@ describe "StaticPages" do
     end
     it "should have the title 'About Us'" do
       visit '/static_pages/about'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
+      expect(page).to have_title("#{prefix}About Us")
     end
   end
   

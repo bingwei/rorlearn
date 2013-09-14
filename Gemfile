@@ -9,6 +9,7 @@ gem 'rails', '4.0.0'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'  
+  gem 'guard-rspec', '2.5.0'
 end
 
 group :test do
@@ -60,3 +61,5 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+require 'rbconfig'
+gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
