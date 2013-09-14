@@ -1,10 +1,13 @@
 Heroku::Application.routes.draw do
-  get "say/hello"
+  resources :microposts
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'say#hello'
+  root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
