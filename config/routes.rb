@@ -1,12 +1,25 @@
 Heroku::Application.routes.draw do
   get "welcome/index"
   get "say/hello"
+  get "users/new"
+  # match '/', to: 'static_pages#home', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  
+  # resources :static_pages
+  resources :microposts
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'posts#index'
+  # root 'posts#index'
+  root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
