@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 # ruby '2.0.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
@@ -69,3 +67,6 @@ gem 'bootstrap_helper'
 #http://stackoverflow.com/questions/18541062/issues-using-bcrypt-3-0-1-with-ruby2-0-on-windows
 gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
 #gem 'bcrypt-ruby', '3.1.1', :require => 'bcrypt'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.0'
