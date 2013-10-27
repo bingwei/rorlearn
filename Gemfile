@@ -8,12 +8,19 @@ group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'  
   gem 'guard-rspec', '2.5.0'
+  # gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+  # gem 'bcrypt-ruby', '3.1.1', :require => 'bcrypt'
 end
 
 
@@ -55,11 +62,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
-
 require 'rbconfig'
 gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 gem 'bootstrap-sass', '2.3.2.0'
@@ -67,7 +69,7 @@ gem 'bootstrap_helper'
 #Fix installation issue of bcrypt-ruby
 #http://stackoverflow.com/questions/18541062/issues-using-bcrypt-3-0-1-with-ruby2-0-on-windows
 gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
-#gem 'bcrypt-ruby', '3.1.1', :require => 'bcrypt'
+# gem 'bcrypt-ruby', '3.1.1', :require => 'bcrypt'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
