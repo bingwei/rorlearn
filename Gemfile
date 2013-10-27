@@ -19,13 +19,13 @@ end
 
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 3.2.3'
+gem 'sass-rails', '4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.1.1'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 3.2.1'
+gem 'coffee-rails', '4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
