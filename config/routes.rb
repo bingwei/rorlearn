@@ -1,4 +1,6 @@
 Heroku::Application.routes.draw do
+  get "welcome/index"
+  get "say/hello"
   get "users/new"
   # match '/', to: 'static_pages#home', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
@@ -15,6 +17,8 @@ Heroku::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  # root 'welcome#index'
+  # root 'posts#index'
   root 'static_pages#home'
 
   # Example of regular route:
@@ -25,6 +29,7 @@ Heroku::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+    resources :posts
 
   # Example resource route with options:
   #   resources :products do

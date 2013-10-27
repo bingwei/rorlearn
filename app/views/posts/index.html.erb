@@ -1,0 +1,18 @@
+<h1>List posts<h1>
+<%= link_to 'New post', new_post_path %>
+<%= link_to 'Full path', posts_url %>
+<%= link_to 'My Blog', controller: "posts" %>
+
+
+<table>
+	<th>Title</th>
+	<th>Text</th>
+	<th>Link</th>
+	<% @posts.each do |p|%>
+	  <tr>
+		<td><%= p.title %></td>
+		<td><%= p.text %></td>
+		<td><%= link_to p.id, post_path(p.id) %></td>
+	  </tr>
+	<% end%>
+</table>

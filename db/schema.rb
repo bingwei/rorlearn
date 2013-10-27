@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20130923142316) do
     t.datetime "updated_at"
   end
 
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
