@@ -1,7 +1,4 @@
 Heroku::Application.routes.draw do
-  get "welcome/index"
-  get "say/hello"
-  get "users/new"
   # match '/', to: 'static_pages#home', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
   match '/help', to: 'static_pages#help', via: 'get'
