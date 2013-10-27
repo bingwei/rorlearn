@@ -18,4 +18,3 @@
 *.swp
 batch_*.bat
 .secret
-*.lock

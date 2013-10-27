@@ -39,7 +39,7 @@ describe User do
   
   describe "when email format is valid" do
     it "should be valid" do
-      addresses = %w{user@foo.COM user_at-a_f@org.b ex.user@foo.jp foo@barb.com fo+bo@bar.com}
+      addresses = %w{foo@bar..com user@foo.COM user_at-a_f@org.b ex.user@foo.jp foo@barb.com fo+bo@bar.com}
       addresses.each do |valid_addr|
         @user.email = valid_addr
         expect(@user).to be_valid
